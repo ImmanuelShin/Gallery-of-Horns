@@ -1,4 +1,8 @@
-# React + Vite
+# Gallery of Horns
+
+This is an introductory project for React. It will include multiple additions over the course of a week that all focus on introducing basic concepts of React.
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
