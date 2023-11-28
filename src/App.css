@@ -40,3 +40,30 @@
 .read-the-docs {
   color: #888;
 }
+
+.carousel-image {
+  width: 400px;
+  height: auto;
+}
+
+
+.header-spin {
+  animation: spin 1s linear;
+}
+
+.gallery-spin {
+  animation: spin 1s linear;
+}
+
+.footer-spin {
+  animation: spin 1s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
