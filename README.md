@@ -27,7 +27,7 @@ Actual time needed to complete: 14 minutes. (Already did a lot of the work in th
 
 Estimate of time needed to complete: 2 hours.
 
-Start time: 
+Start time: 11:15 am
 
 Finish time: 
 
