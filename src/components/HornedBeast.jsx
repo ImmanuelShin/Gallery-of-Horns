@@ -7,11 +7,11 @@ function HornedBeast ({
     key,
 }) {
     return (
-        <section className="horned-beast">
+        <figure className="horned-beast">
             <h2>{title}</h2>
             <img src={img} alt={title} title={title} />
-            <p>{description}</p>
-        </section>
+            <figcaption>{description}</figcaption>
+        </figure>
     )
 }
 
