@@ -29,9 +29,9 @@ Estimate of time needed to complete: 2 hours.
 
 Start time: 11:15 am
 
-Finish time: 
+Finish time: 11:27 am
 
-Actual time needed to complete: 
+Actual time needed to complete: 12 minutes. (Only functionality, no design/polish).
 
 ### Feature 3: Bootstrap
 
