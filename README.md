@@ -19,9 +19,9 @@ Estimate of time needed to complete: 1 hour.
 
 Start time: 11:00 am
 
-Finish time: 
+Finish time: 11:14 am
 
-Actual time needed to complete: 
+Actual time needed to complete: 14 minutes. (Already did a lot of the work in the previous lab)
 
 ### Feature #2: Allow Users to Favorite Individual Beasts
 
