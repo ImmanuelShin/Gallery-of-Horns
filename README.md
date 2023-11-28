@@ -47,8 +47,8 @@ Actual time needed to complete: 41 minutes. (Did bare minimum stylings)
 
 Estimate of time needed to complete: 3 hours.
 
-Start time: 
+Start time: 1:31 pm
 
-Finish time: 
+Finish time: 2:34 pm
 
-Actual time needed to complete: 
+Actual time needed to complete: 1 hour 3 minutes.
