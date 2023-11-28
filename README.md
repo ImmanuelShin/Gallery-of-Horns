@@ -37,7 +37,7 @@ Actual time needed to complete: 12 minutes. (Only functionality, no design/polis
 
 Estimate of time needed to complete: 4 hours.
 
-Start time: 
+Start time: 11:30 am
 
 Finish time: 
 
