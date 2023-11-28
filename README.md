@@ -17,7 +17,7 @@ Currently, two official plugins are available:
 
 Estimate of time needed to complete: 1 hour.
 
-Start time: 
+Start time: 11:00 am
 
 Finish time: 
 
