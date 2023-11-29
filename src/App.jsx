@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../src/components/Header';
 import Gallery from '../src/components/Gallery';
 import Footer from '../src/components/Footer';
+import SelectedBeast from '../src/components/SelectedBeast';
 import Container from 'react-bootstrap/Container';
+import beastData from '../src/components/data/data.json';
 
 function App() {
   const [headSpin, setHeadSpin] = useState(false);
@@ -21,6 +23,26 @@ function App() {
     }
   };
 
+  const [selectedBeast, setSelectedBeast] = useState(null);
+
+  const carouselSelection = (selectedBeastData) => {
+    console.log('Selected Beast:', selectedBeastData);
+    setSelectedBeast(selectedBeastData);
+  }
+
+  const closeModal = () => {
+    setSelectedBeast(null);
+  }
+
+  const [favCounts, setFavCounts] = useState({});
+
+  const increaseFavCount = (beastId) => {
+    setFavCounts((prevCounts) => ({
+      ...prevCounts,
+      [beastId]: (prevCounts[beastId] || 0) + 1,
+    }));
+  }
+
   return (
     <Container>
       <Header 
@@ -32,7 +54,21 @@ function App() {
         title="Horned Beast Gallery"
         onSpinClick={() => spinOnClick('gallery')} 
         spin={gallerySpin}
+        beastData={beastData}
+        onCarouselClick={carouselSelection}
+        favCounts={favCounts}
+        increaseFav={increaseFavCount}
       />
+        {selectedBeast && (
+          <SelectedBeast 
+            title={selectedBeast.title}
+            img={selectedBeast.image_url}
+            description={selectedBeast.description}
+            closeModal={closeModal}
+            favCount={favCounts[selectedBeast._id] || 0}
+            increaseFav={() => increaseFavCount(selectedBeast._id)}
+          />
+        )}
       <Footer 
         name="Immanuel Shin" 
         onSpinClick={() => spinOnClick('footer')} 
