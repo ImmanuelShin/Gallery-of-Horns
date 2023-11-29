@@ -59,11 +59,11 @@ Actual time needed to complete: 1 hour 3 minutes.
 
 Estimate of time needed to complete: 1 hour.
 
-Start time:
+Start time: 11:23 am - 12:00 pm, 12:40 pm
 
-Finish time:
+Finish time: 1:47 pm
 
-Actual time needed to complete:
+Actual time needed to complete: 1 hour 37 minutes.
 
 ### Feature #2: Fuzzy search
 
