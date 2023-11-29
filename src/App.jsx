@@ -26,7 +26,6 @@ function App() {
   const [selectedBeast, setSelectedBeast] = useState(null);
 
   const carouselSelection = (selectedBeastData) => {
-    console.log('Selected Beast:', selectedBeastData);
     setSelectedBeast(selectedBeastData);
   }
 
