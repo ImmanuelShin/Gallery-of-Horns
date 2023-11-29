@@ -69,8 +69,8 @@ Actual time needed to complete: 1 hour 37 minutes.
 
 Estimate of time needed to complete: 3 hours.
 
-Start time:
+Start time: 1:55 pm
 
-Finish time:
+Finish time: 2:33 pm
 
-Actual time needed to complete:
+Actual time needed to complete: 38 minutes. (The fuzzy search is rudimentary. Would take me longer to do a better one)
