@@ -1,32 +1,19 @@
 import Figure from 'react-bootstrap/Figure';
-import { useState } from 'react';
 
-function HornedBeast({
-  title,
-  img,
-  description,
-  horns,
-  keyword,
-}) {
-  const [fav, setFav] = useState(0);
-
-  const favClick = () => {
-    setFav(fav + 1);
-  }
-
+function HornedBeast(props) {
   return (
     <Figure>
-      <h2>{title}</h2>
-      <button onClick={favClick}>
+      <h2>{props.title}</h2>
+      <button>
         <img 
-          src={img} 
-          alt={title} 
-          title={title}
+          src={props.img} 
+          alt={props.title} 
+          title={props.title}
           className='carousel-image'
         />
       </button>
-      <figcaption>{description}</figcaption>
-      <figcaption>&#10084;: {fav}</figcaption>
+      <figcaption>{props.description}</figcaption>
+      <figcaption>&#10084;: {props.favCounts[props.Id] || 0}</figcaption>
     </Figure>
   )
 }
