@@ -21,25 +21,11 @@ function Gallery(props) {
     setSearch(e.target.value);
   };
 
-  const attemptFuzzy = (text, search) => {
-    let i = 0;
-    let j = 0;
-
-    while (i < text.length && j < search.length) {
-      if (text[i] === search[j]) {
-        j++;
-      }
-      i++;
-    }
-    return j === search.length;
-  }
-
   const filteredBeasts = props.beastData.filter((beast) => 
-    attemptFuzzy(beast.keyword.toLowerCase(), search.toLowerCase()) ||
-    attemptFuzzy(beast.title.toLowerCase(), search.toLowerCase())
+    beast.keyword.toLowerCase().includes(search.toLowerCase()) ||
+    beast.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  
   return (
     <main>
       <h2 className={props.spin ? 'gallery-spin' : ''} onClick={props.onSpinClick}>
