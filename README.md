@@ -52,3 +52,25 @@ Start time: 1:31 pm
 Finish time: 2:34 pm
 
 Actual time needed to complete: 1 hour 3 minutes.
+
+## Lab 03
+
+### Feature #1: Display a Modal
+
+Estimate of time needed to complete: 1 hour.
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
+
+### Feature #2: Fuzzy search
+
+Estimate of time needed to complete: 3 hours.
+
+Start time:
+
+Finish time:
+
+Actual time needed to complete:
