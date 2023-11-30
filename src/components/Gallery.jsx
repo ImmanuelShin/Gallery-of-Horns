@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import HornedBeast from '../components/HornedBeast';
+import Search from '../components/Search';
 
 
 function Gallery(props) {
@@ -15,29 +16,34 @@ function Gallery(props) {
     props.onCarouselClick(beast);
   }
 
-  const [search, setSearch] = useState('');
+  const uniqueHorns = [...new Set(props.beastData.map(beast => beast.horns))];
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
+  const [search, setSearch] = useState('');
+  const [selectedHorns, setSelectedHorns] = useState('');
+  
+  const handleSearch = (input, horns) => {
+    console.log('Gallery handle:' + input + ' ' + horns);
+    setSearch(input);
+    setSelectedHorns(horns);
   };
 
   const filteredBeasts = props.beastData.filter((beast) => 
-    beast.keyword.toLowerCase().includes(search.toLowerCase()) ||
-    beast.title.toLowerCase().includes(search.toLowerCase())
-  );
+    (beast.keyword.toLowerCase().includes(search.toLowerCase()) ||
+    beast.title.toLowerCase().includes(search.toLowerCase())) && 
+    (selectedHorns === '' || selectedHorns === 'Any Horns' || beast.horns.toString() === selectedHorns)
+);
 
   return (
     <main>
       <h2 className={props.spin ? 'gallery-spin' : ''} onClick={props.onSpinClick}>
         {props.title}
       </h2>
-      <input
-        type='text'
-        placeholder='Search for keywords...'
-        value={search}
-        onChange={handleSearch}
-      >
-      </input>
+      <section className='search-area'>
+        <Search 
+          onSearch={handleSearch}
+          uniqueHorns={uniqueHorns}
+        />
+      </section>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {filteredBeasts.map((beast) => (
           <Carousel.Item 
