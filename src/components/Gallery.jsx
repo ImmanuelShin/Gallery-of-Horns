@@ -19,15 +19,19 @@ function Gallery(props) {
   const uniqueHorns = [...new Set(props.beastData.map(beast => beast.horns))];
 
   const [search, setSearch] = useState('');
-
-  const handleSearch = (input) => {
+  const [selectedHorns, setSelectedHorns] = useState('');
+  
+  const handleSearch = (input, horns) => {
+    console.log('Gallery handle:' + input + ' ' + horns);
     setSearch(input);
+    setSelectedHorns(horns);
   };
 
   const filteredBeasts = props.beastData.filter((beast) => 
-    beast.keyword.toLowerCase().includes(search.toLowerCase()) ||
-    beast.title.toLowerCase().includes(search.toLowerCase())
-  );
+    (beast.keyword.toLowerCase().includes(search.toLowerCase()) ||
+    beast.title.toLowerCase().includes(search.toLowerCase())) && 
+    (selectedHorns === '' || selectedHorns === 'Any Horns' || beast.horns.toString() === selectedHorns)
+);
 
   return (
     <main>
