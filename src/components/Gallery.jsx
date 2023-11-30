@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import HornedBeast from '../components/HornedBeast';
+import Search from '../components/Search';
 
 
 function Gallery(props) {
@@ -15,10 +16,12 @@ function Gallery(props) {
     props.onCarouselClick(beast);
   }
 
+  const uniqueHorns = [...new Set(props.beastData.map(beast => beast.horns))];
+
   const [search, setSearch] = useState('');
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
+  const handleSearch = (input) => {
+    setSearch(input);
   };
 
   const filteredBeasts = props.beastData.filter((beast) => 
@@ -31,13 +34,12 @@ function Gallery(props) {
       <h2 className={props.spin ? 'gallery-spin' : ''} onClick={props.onSpinClick}>
         {props.title}
       </h2>
-      <input
-        type='text'
-        placeholder='Search for keywords...'
-        value={search}
-        onChange={handleSearch}
-      >
-      </input>
+      <section className='search-area'>
+        <Search 
+          onSearch={handleSearch}
+          uniqueHorns={uniqueHorns}
+        />
+      </section>
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {filteredBeasts.map((beast) => (
           <Carousel.Item 
